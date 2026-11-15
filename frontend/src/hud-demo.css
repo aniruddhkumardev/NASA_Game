@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(30, 30, 30, 0.55), transparent 60%),
+    radial-gradient(900px 500px at 85% 110%, rgba(40, 40, 40, 0.4), transparent 60%),
+    #050505;
+}
+
+body {
+  font-family: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Faint starfield behind the HUD preview. */
+.demo-page {
+  min-height: 100vh;
+  padding: 32px 18px;
+  display: grid;
+  place-items: center;
+  background-image:
+    radial-gradient(1px 1px at 18% 22%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 72% 14%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 44% 68%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 86% 58%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 8% 82%, rgba(255, 255, 255, 0.4), transparent);
+  background-repeat: no-repeat;
+}

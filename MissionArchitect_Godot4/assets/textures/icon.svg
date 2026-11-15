@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Space background -->
+  <rect width="128" height="128" fill="#060b1e" rx="16"/>
+  <!-- Stars -->
+  <circle cx="20" cy="15" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="50" cy="8" r="1" fill="white" opacity="0.6"/>
+  <circle cx="100" cy="20" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="110" cy="55" r="1" fill="white" opacity="0.5"/>
+  <circle cx="15" cy="70" r="1" fill="white" opacity="0.6"/>
+  <circle cx="118" cy="90" r="1.5" fill="white" opacity="0.8"/>
+  <circle cx="10" cy="110" r="1" fill="white" opacity="0.5"/>
+  <!-- Earth -->
+  <circle cx="64" cy="80" r="30" fill="#1a4a8a"/>
+  <circle cx="64" cy="80" r="30" fill="none" stroke="#3399ff" stroke-width="1.5" opacity="0.5"/>
+  <!-- Atmosphere glow -->
+  <circle cx="64" cy="80" r="33" fill="none" stroke="#4488ff" stroke-width="2" opacity="0.2"/>
+  <!-- Orbit ring -->
+  <ellipse cx="64" cy="80" rx="50" ry="18" fill="none" stroke="#00ccff" stroke-width="1.5" opacity="0.6" stroke-dasharray="4,3"/>
+  <!-- Satellite body -->
+  <rect x="58" y="36" width="12" height="10" fill="#ccddee" rx="2"/>
+  <!-- Solar panels -->
+  <rect x="40" y="38" width="16" height="6" fill="#2255bb" rx="1"/>
+  <rect x="72" y="38" width="16" height="6" fill="#2255bb" rx="1"/>
+  <!-- Panel highlight -->
+  <rect x="40" y="38" width="16" height="2" fill="#4477dd" rx="1" opacity="0.6"/>
+  <rect x="72" y="38" width="16" height="2" fill="#4477dd" rx="1" opacity="0.6"/>
+  <!-- Antenna -->
+  <line x1="64" y1="36" x2="64" y2="28" stroke="#aabbcc" stroke-width="1.5"/>
+  <circle cx="64" cy="27" r="3" fill="none" stroke="#00ccff" stroke-width="1.5"/>
+  <!-- Rocket (bottom) -->
+  <polygon points="74,112 78,95 82,112" fill="#dd4422"/>
+  <rect x="74" y="95" width="8" height="20" fill="#cccccc" rx="2"/>
+  <polygon points="78,78 74,95 82,95" fill="#eeeeee"/>
+  <!-- Exhaust flame -->
+  <ellipse cx="78" cy="115" rx="3" ry="5" fill="#ff8822" opacity="0.8"/>
+  <ellipse cx="78" cy="117" rx="2" ry="3" fill="#ffdd22" opacity="0.9"/>
+  <!-- Title text -->
+  <text x="64" y="14" font-family="Arial" font-size="8" fill="#22aaff" text-anchor="middle" font-weight="bold">MISSION</text>
+  <text x="64" y="23" font-family="Arial" font-size="8" fill="white" text-anchor="middle" font-weight="bold">ARCHITECT</text>
+</svg>

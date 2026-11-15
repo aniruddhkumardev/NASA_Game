@@ -1,0 +1,135 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/simulation/LunarMission.gd" id="1_lunar"]
+
+[sub_resource type="ProceduralSkyMaterial" id="StarsSkyMat"]
+sky_top_color = Color(0.0, 0.0, 0.0, 1.0)
+sky_horizon_color = Color(0.0, 0.0, 0.0, 1.0)
+sky_curve = 1.0
+ground_bottom_color = Color(0.0, 0.0, 0.0, 1.0)
+ground_horizon_color = Color(0.0, 0.0, 0.0, 1.0)
+ground_curve = 1.0
+sun_angle_max = 2.0
+sun_curve = 0.05
+
+[sub_resource type="Sky" id="SpaceSky"]
+sky_material = SubResource("StarsSkyMat")
+process_mode = 0
+
+[sub_resource type="Environment" id="Environment_lunar"]
+background_mode = 2
+sky = SubResource("SpaceSky")
+ambient_light_source = 3
+ambient_light_color = Color(0.18, 0.20, 0.27, 1.0)
+ambient_light_energy = 0.26
+glow_enabled = true
+glow_intensity = 0.45
+glow_bloom = 0.12
+ssao_enabled = true
+ssao_radius = 1.2
+ssao_intensity = 1.8
+sdfgi_enabled = false
+
+[sub_resource type="StyleBoxFlat" id="Hud_panel"]
+bg_color = Color(0.0823529, 0.0823529, 0.0823529, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.2, 0.2, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_left = 4
+corner_radius_bottom_right = 4
+
+[node name="LunarMission" type="Node3D"]
+script = ExtResource("1_lunar")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lunar")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-14, -32, 0)
+light_energy = 3.2
+shadow_enabled = true
+light_color = Color(1.0, 0.97, 0.90, 1.0)
+shadow_bias = 0.03
+
+[node name="EarthFillLight" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(38, 155, 0)
+light_energy = 0.18
+light_color = Color(0.45, 0.62, 1.0, 1.0)
+shadow_enabled = false
+
+[node name="Moon" type="Node3D" parent="."]
+
+[node name="MoonSurface" type="MeshInstance3D" parent="Moon"]
+
+[node name="LunarScout" type="Node3D" parent="."]
+
+[node name="LunarCamera" type="Camera3D" parent="."]
+position = Vector3(8, 5, 12)
+current = true
+fov = 52.0
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="HUD" type="Panel" parent="UI"]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 610.0
+offset_bottom = 150.0
+theme_override_styles/panel = SubResource("Hud_panel")
+
+[node name="DayLabel" type="Label" parent="UI/HUD"]
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 560.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Lunar Day 0 / 180"
+
+[node name="PhaseLabel" type="Label" parent="UI/HUD"]
+offset_left = 16.0
+offset_top = 72.0
+offset_right = 570.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 17
+
+[node name="Telemetry" type="Panel" parent="UI"]
+offset_left = 24.0
+offset_top = 168.0
+offset_right = 610.0
+offset_bottom = 305.0
+theme_override_styles/panel = SubResource("Hud_panel")
+
+[node name="OrbitLabel" type="Label" parent="UI/Telemetry"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 550.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.701961, 0.701961, 0.701961, 1)
+theme_override_font_sizes/font_size = 15
+
+[node name="ScanLabel" type="Label" parent="UI/Telemetry"]
+offset_left = 16.0
+offset_top = 52.0
+offset_right = 550.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.701961, 0.701961, 0.701961, 1)
+theme_override_font_sizes/font_size = 15
+
+[node name="IceBar" type="ProgressBar" parent="UI/Telemetry"]
+offset_left = 16.0
+offset_top = 95.0
+offset_right = 550.0
+offset_bottom = 115.0
+max_value = 100.0
+show_percentage = true

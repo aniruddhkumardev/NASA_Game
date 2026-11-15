@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Vulkan 1.4.341 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce GTX 1650
+
+[GameManager] Ready — Mission Architect v1.0
+[SimEngine] Ready
+[Launch] Vehicle falcon9 | 7600 kN | 533700 kg wet | TWR 1.45 | target 550 km @ 51.6° | v_circ 7589 m/s
+[Launch] Ready — thrust: 7600 kN | rocket: Rocket
+[Launch] Vehicle falcon9 | 7600 kN | 534400 kg wet | TWR 1.45 | target 550 km @ 97.6° | v_circ 7589 m/s
+PROBE DONE (complete)

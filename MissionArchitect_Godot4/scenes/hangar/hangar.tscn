@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=3 uid="uid://hangar"]
+
+[ext_resource type="Script" path="res://scripts/core/Hangar.gd" id="1_hangar"]
+[ext_resource type="Script" path="res://scripts/player/Player.gd" id="2_player"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_floor"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wall"]
+size = Vector3(40, 20, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape_floor"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_body"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape_player"]
+radius = 0.4
+height = 1.8
+
+[node name="Hangar" type="Node3D"]
+script = ExtResource("1_hangar")
+
+[node name="WorldLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866, -0.25, 0.433, 0, 0.866, 0.5, -0.5, -0.433, 0.75, 12, 20, 12)
+light_energy = 1.0
+
+[node name="HangarFloor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh = SubResource("BoxMesh_floor")
+
+[node name="HangarWallBack" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -20)
+mesh = SubResource("BoxMesh_wall")
+
+[node name="HangarFloorBody" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+
+[node name="FloorCollision" type="CollisionShape3D" parent="HangarFloorBody"]
+shape = SubResource("BoxShape_floor")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
+script = ExtResource("2_player")
+
+[node name="BodyMesh" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_body")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape_player")
+
+[node name="CameraPivot" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+current = true
+
+[node name="InteractRayCast" type="RayCast3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+target_position = Vector3(0, 0, -4)
+enabled = true
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="InteractHint" type="Label" parent="HUD"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_top = 0.7
+anchor_bottom = 0.7
+offset_left = -180
+offset_right = 180
+offset_top = -18
+offset_bottom = 18
+horizontal_alignment = 1
+visible = false
+text = "[E] Interact"
+
+[node name="Crosshair" type="Label" parent="HUD"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -6
+offset_right = 6
+offset_top = -8
+offset_bottom = 8
+text = "+"
+horizontal_alignment = 1
+
+[node name="HangarUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MissionPanel" type="PanelContainer" parent="HangarUI"]
+layout_mode = 1
+anchor_left = 0.08
+anchor_right = 0.92
+anchor_top = 0.04
+anchor_bottom = 0.96
+visible = false
+
+[node name="MissionPanelVBox" type="VBoxContainer" parent="HangarUI/MissionPanel"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HangarUI/MissionPanel/MissionPanelVBox"]
+layout_mode = 2
+text = "MISSION TERMINAL"
+horizontal_alignment = 1

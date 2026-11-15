@@ -1,0 +1,9 @@
+FAIL: SwotWaterTargets node exists
+FAIL: KaRIn scan beam created
+FAIL: KaRIn footprint ring created
+FAIL: control room button added to HUD
+FAIL: SwotControlRoom built
+PASS: 3+ SWOT water sites scanned (got 6)
+PASS: 1+ records downlinked to control room (got 6)
+PASS: ocean, lake and river all scanned ({ "ocean": 2, "lake": 2, "river": 2 })
+PASS: SWOT objective completed

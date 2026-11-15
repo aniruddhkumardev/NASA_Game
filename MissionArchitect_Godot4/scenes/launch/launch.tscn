@@ -1,0 +1,314 @@
+[gd_scene load_steps=22 format=3 uid="uid://launch"]
+
+[ext_resource type="Script" path="res://scripts/core/LaunchSequence.gd" id="1_launch"]
+[ext_resource type="PackedScene" path="res://assets/models/falcon9_rocket.glb" id="2_rocket_model"]
+[ext_resource type="PackedScene" path="res://assets/models/launch_pad.glb" id="3_launch_complex"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ground"]
+size = Vector3(200.0, 0.5, 200.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pad"]
+size = Vector3(12.0, 0.6, 12.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pad_arm"]
+size = Vector3(1.0, 8.0, 1.0)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rocket"]
+top_radius = 0.55
+bottom_radius = 0.65
+height = 14.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nose"]
+top_radius = 0.0
+bottom_radius = 0.55
+height = 4.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_engine"]
+top_radius = 0.65
+bottom_radius = 0.9
+height = 1.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_finL"]
+size = Vector3(0.15, 3.0, 1.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_finR"]
+size = Vector3(0.15, 3.0, 1.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_finF"]
+size = Vector3(1.4, 3.0, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_finB"]
+size = Vector3(1.4, 3.0, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="Mat_ground"]
+albedo_color = Color(0.25, 0.32, 0.22, 1.0)
+roughness = 0.95
+
+[sub_resource type="StandardMaterial3D" id="Mat_pad"]
+albedo_color = Color(0.55, 0.52, 0.48, 1.0)
+roughness = 0.85
+metallic = 0.1
+
+[sub_resource type="StandardMaterial3D" id="Mat_rocket_body"]
+albedo_color = Color(0.95, 0.95, 0.95, 1.0)
+metallic = 0.6
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="Mat_rocket_dark"]
+albedo_color = Color(0.15, 0.15, 0.18, 1.0)
+metallic = 0.7
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="Mat_fins"]
+albedo_color = Color(0.85, 0.85, 0.88, 1.0)
+metallic = 0.5
+roughness = 0.35
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleMat_exhaust"]
+direction = Vector3(0.0, -1.0, 0.0)
+spread = 22.0
+gravity = Vector3(0.0, 0.0, 0.0)
+initial_velocity_min = 18.0
+initial_velocity_max = 30.0
+angular_velocity_min = -60.0
+angular_velocity_max = 60.0
+scale_min = 0.3
+scale_max = 0.9
+color = Color(1.0, 0.55, 0.05, 1.0)
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMat_launch"]
+sky_top_color = Color(0.08, 0.18, 0.52, 1.0)
+sky_horizon_color = Color(0.55, 0.68, 0.9, 1.0)
+sky_curve = 0.15
+ground_bottom_color = Color(0.13, 0.17, 0.22, 1.0)
+ground_horizon_color = Color(0.42, 0.52, 0.66, 1.0)
+ground_curve = 0.02
+sun_angle_max = 35.0
+sun_curve = 0.12
+
+[sub_resource type="Sky" id="Sky_launch"]
+sky_material = SubResource("SkyMat_launch")
+
+[sub_resource type="Environment" id="Env_launch"]
+background_mode = 2
+sky = SubResource("Sky_launch")
+ambient_light_source = 2
+ambient_light_color = Color(0.6, 0.65, 0.8, 1.0)
+ambient_light_energy = 0.4
+tonemap_mode = 2
+tonemap_exposure = 1.15
+# Players reported the pad scene looked hazy: the exponential fog and the
+# strong bloom were veiling the whole shot. Bloom is kept but subtle, and the
+# fog is now distance-limited so crispness survives at the master camera.
+glow_enabled = true
+glow_intensity = 0.28
+glow_strength = 0.45
+glow_bloom = 0.04
+glow_hdr_threshold = 1.05
+fog_enabled = true
+fog_light_color = Color(0.7, 0.75, 0.9, 1.0)
+fog_density = 0.0004
+fog_height = 6.0
+fog_height_density = 0.06
+
+[node name="LaunchScene" type="Node3D"]
+script = ExtResource("1_launch")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env_launch")
+
+[node name="WorldLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866, -0.3, 0.4, 0.0, 0.8, 0.6, -0.5, -0.52, 0.69, 0, 120, 0)
+light_energy = 1.6
+shadow_enabled = true
+light_color = Color(1.0, 0.95, 0.85, 1.0)
+
+[node name="FillLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.7, -0.1, -0.7, 0, 0.99, -0.14, 0.7, -0.1, -0.7, 0, 80, 0)
+light_energy = 0.35
+light_color = Color(0.6, 0.7, 1.0, 1.0)
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("BoxMesh_ground")
+material_override = SubResource("Mat_ground")
+
+[node name="LaunchPad" type="MeshInstance3D" parent="."]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+mesh = SubResource("BoxMesh_pad")
+material_override = SubResource("Mat_pad")
+
+[node name="PadArm" type="MeshInstance3D" parent="."]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0, 4.0, -2.0)
+mesh = SubResource("BoxMesh_pad_arm")
+material_override = SubResource("Mat_pad")
+
+[node name="LaunchComplex" parent="." instance=ExtResource("3_launch_complex")]
+position = Vector3(-4.0, 0, 0)
+scale = Vector3(0.28, 0.28, 0.28)
+
+[node name="Rocket" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+
+[node name="RocketModel" parent="Rocket" instance=ExtResource("2_rocket_model")]
+position = Vector3(0, -6.5, 0)
+scale = Vector3(0.28, 0.28, 0.28)
+
+[node name="RocketMesh" type="MeshInstance3D" parent="Rocket"]
+visible = false
+mesh = SubResource("CylinderMesh_rocket")
+material_override = SubResource("Mat_rocket_body")
+
+[node name="Nosecone" type="MeshInstance3D" parent="Rocket"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.0, 0)
+mesh = SubResource("CylinderMesh_nose")
+material_override = SubResource("Mat_rocket_body")
+
+[node name="EngineNozzle" type="MeshInstance3D" parent="Rocket"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.0, 0)
+mesh = SubResource("CylinderMesh_engine")
+material_override = SubResource("Mat_rocket_dark")
+
+[node name="FinL" type="MeshInstance3D" parent="Rocket"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82, -4.0, 0)
+mesh = SubResource("BoxMesh_finL")
+material_override = SubResource("Mat_fins")
+
+[node name="FinR" type="MeshInstance3D" parent="Rocket"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82, -4.0, 0)
+mesh = SubResource("BoxMesh_finR")
+material_override = SubResource("Mat_fins")
+
+[node name="FinF" type="MeshInstance3D" parent="Rocket"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.0, -0.82)
+mesh = SubResource("BoxMesh_finF")
+material_override = SubResource("Mat_fins")
+
+[node name="FinB" type="MeshInstance3D" parent="Rocket"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.0, 0.82)
+mesh = SubResource("BoxMesh_finB")
+material_override = SubResource("Mat_fins")
+
+[node name="ExhaustParticles" type="GPUParticles3D" parent="Rocket"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.5, 0)
+emitting = false
+amount = 300
+lifetime = 1.2
+process_material = SubResource("ParticleMat_exhaust")
+
+[node name="ChaseCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.88, -0.47, 0, 0.47, 0.88, 18, 10, 28)
+current = true
+fov = 55.0
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HUD" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 14
+offset_top = 14
+offset_right = 320
+offset_bottom = 280
+
+[node name="CountdownLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "AWAITING LAUNCH"
+
+[node name="StageLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "Pre-Launch"
+
+[node name="PhaseLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "MISSION PHASE 0/5 — READY"
+
+[node name="AltitudeLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "ALT: 0.0 km"
+
+[node name="VelocityLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "VEL: 0 m/s"
+
+[node name="FlightPathLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "FPA: 0.0°  |  Downrange: 0 km  |  Q: 0.0 kPa"
+autowrap_mode = 3
+
+[node name="AccelerationLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "Accel: 0.00 g  |  Vertical: 0 m/s  |  Horizontal: 0 m/s"
+autowrap_mode = 3
+
+[node name="OrbitEstimateLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "TRAJECTORY  Ap: 0 km  |  Pe: -6371 km"
+autowrap_mode = 3
+
+[node name="StatusLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "All systems nominal. Press LAUNCH."
+autowrap_mode = 3
+
+[node name="FuelLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "Fuel"
+
+[node name="FuelBar" type="ProgressBar" parent="UI/HUD"]
+layout_mode = 2
+max_value = 100
+value = 100
+custom_minimum_size = Vector2(260, 14)
+
+[node name="ThrottleLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "Throttle: 0%"
+
+[node name="ThrottleBar" type="ProgressBar" parent="UI/HUD"]
+layout_mode = 2
+max_value = 100
+value = 0
+custom_minimum_size = Vector2(260, 14)
+
+[node name="ControlPanel" type="HBoxContainer" parent="UI"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14
+offset_right = -14
+offset_top = -62
+
+[node name="LaunchButton" type="Button" parent="UI/ControlPanel"]
+layout_mode = 2
+custom_minimum_size = Vector2(160, 50)
+text = "LAUNCH"
+
+[node name="AutoThrottleCheck" type="CheckBox" parent="UI/ControlPanel"]
+layout_mode = 2
+button_pressed = true
+text = "Auto Throttle"
+
+[node name="Spacer" type="Control" parent="UI/ControlPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AbortButton" type="Button" parent="UI/ControlPanel"]
+layout_mode = 2
+custom_minimum_size = Vector2(110, 44)
+text = "ABORT"

@@ -1,0 +1,14 @@
+CONFIG mission=earth_climate data_rate=2.0 bw=8.0 sci/orbit=48 period=5730.1s
+ORBIT #0 angle=0deg contact=false station= stored=1MB tx=0MB active=false
+FIRST DOWNLINK BEAM station=Svalbard
+ORBIT #1 angle=0deg contact=false station= stored=7922MB tx=3542MB active=true
+TIMEOUT before commissioning completed
+RESULT success=false revs=0 passes=0 tx_gb=6.256 science=76.9/80
+SIM_STATE climate_complete=false commission_revs=0 passes=0
+STATION network_children=4 (expect 4) beam=true commission_active=true complete=false
+[PASS] station network built (4 pins)
+[FAIL] two revolutions flown
+[PASS] climate data downlinked (>0 MB)
+[PASS] downlink beam locked a station
+[PASS] a station rose above the mask
+[FAIL] commissioning flagged complete

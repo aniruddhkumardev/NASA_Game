@@ -1,0 +1,15 @@
+﻿Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+Godot_v4.7.2-stable_win64.exe : SCRIPT ERROR: Compile Error: Identifier not 
+found: GameManager
+At line:1 char:68
++ ... ect_Godot4; & "F:\DownloadedApps\GodotEngine\Godot_v4.7.2-stable_win6 ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (SCRIPT ERROR: C...nd: GameManager 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   at: GDScript::reload (res://scripts/simulation/OrbitMission.gd:152)
+ERROR: Failed to load script "res://scripts/simulation/OrbitMission.gd" with 
+error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)

@@ -1,0 +1,1 @@
+LIVE peak veil alpha=0.500  (pre-fix was 0.88)  samples=74  verdict=CONTINUOUS (light dim, not black)

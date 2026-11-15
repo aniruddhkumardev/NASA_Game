@@ -1,0 +1,174 @@
+[gd_scene load_steps=2 format=3 uid="uid://mission_report"]
+
+[ext_resource type="Script" path="res://scripts/ui/MissionReport.gd" id="1_report"]
+
+[node name="MissionReport" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_report")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="Header" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_top = 8
+offset_bottom = 76
+
+[node name="MissionNameLabel" type="Label" parent="Header"]
+layout_mode = 2
+text = "Mission Complete"
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="Header"]
+layout_mode = 2
+text = "MISSION SUCCESS"
+horizontal_alignment = 1
+
+[node name="ScorePanel" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_top = 0.1
+anchor_bottom = 0.33
+offset_left = -110
+offset_right = 110
+alignment = 1
+
+[node name="ScoreTitleLabel" type="Label" parent="ScorePanel"]
+layout_mode = 2
+text = "MISSION SCORE"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="ScorePanel"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="ScoreSubLabel" type="Label" parent="ScorePanel"]
+layout_mode = 2
+text = "out of 100"
+horizontal_alignment = 1
+
+[node name="StatsPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_top = 0.33
+anchor_bottom = 0.47
+
+[node name="StatsVBox" type="VBoxContainer" parent="StatsPanel"]
+layout_mode = 2
+
+[node name="ScienceBar" type="ProgressBar" parent="StatsPanel/StatsVBox"]
+layout_mode = 2
+max_value = 80
+custom_minimum_size = Vector2(0, 14)
+
+[node name="ScienceLabel" type="Label" parent="StatsPanel/StatsVBox"]
+layout_mode = 2
+text = "Science: 0 / 80 pts"
+
+[node name="DataLabel" type="Label" parent="StatsPanel/StatsVBox"]
+layout_mode = 2
+text = "Data Transmitted: 0 GB"
+
+[node name="OrbitsLabel" type="Label" parent="StatsPanel/StatsVBox"]
+layout_mode = 2
+text = "Total Orbits: 0  |  Mission Days: 0"
+
+[node name="BreakdownPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.02
+anchor_right = 0.48
+anchor_top = 0.47
+anchor_bottom = 0.82
+
+[node name="BVBox" type="VBoxContainer" parent="BreakdownPanel"]
+layout_mode = 2
+
+[node name="BreakdownTitle" type="Label" parent="BreakdownPanel/BVBox"]
+layout_mode = 2
+text = "SCORE BREAKDOWN"
+
+[node name="BreakdownList" type="VBoxContainer" parent="BreakdownPanel/BVBox"]
+layout_mode = 2
+
+[node name="ImprovementsPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 0.98
+anchor_top = 0.47
+anchor_bottom = 0.68
+
+[node name="IVBox" type="VBoxContainer" parent="ImprovementsPanel"]
+layout_mode = 2
+
+[node name="ImprovementsTitle" type="Label" parent="ImprovementsPanel/IVBox"]
+layout_mode = 2
+text = "HOW TO IMPROVE"
+
+[node name="ImprovementList" type="VBoxContainer" parent="ImprovementsPanel/IVBox"]
+layout_mode = 2
+
+[node name="EventLogPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 0.98
+anchor_top = 0.68
+anchor_bottom = 0.82
+
+[node name="ELVBox" type="VBoxContainer" parent="EventLogPanel"]
+layout_mode = 2
+
+[node name="EventLogTitle" type="Label" parent="EventLogPanel/ELVBox"]
+layout_mode = 2
+text = "KEY EVENTS"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="EventLogPanel/ELVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="EventList" type="VBoxContainer" parent="EventLogPanel/ELVBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14
+offset_right = -14
+offset_top = -58
+
+[node name="RetryButton" type="Button" parent="ButtonBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 46)
+text = "Retry Same Design"
+
+[node name="NewMissionButton" type="Button" parent="ButtonBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(160, 46)
+text = "New Mission"
+
+[node name="Spacer" type="Control" parent="ButtonBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveButton" type="Button" parent="ButtonBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 46)
+text = "Save Result"
+
+[node name="MainMenuButton" type="Button" parent="ButtonBar"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 46)
+text = "Main Menu"

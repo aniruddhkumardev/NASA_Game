@@ -1,0 +1,423 @@
+[gd_scene load_steps=22 format=3 uid="uid://orbit"]
+
+[ext_resource type="Script" path="res://scripts/simulation/OrbitMission.gd" id="1_orbit"]
+[ext_resource type="PackedScene" path="res://assets/models/earth.glb" id="2_earth_model"]
+[ext_resource type="PackedScene" path="res://assets/models/satellite.glb" id="3_satellite_model"]
+[ext_resource type="Texture2D" path="res://assets/textures/earth-blue-marble-8k.jpg" id="4_nasa_earth"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_earth"]
+radius = 1.0
+height = 2.0
+radial_segments = 128
+rings = 64
+
+[sub_resource type="SphereMesh" id="SphereMesh_atmo"]
+radius = 1.0
+height = 2.0
+radial_segments = 96
+rings = 48
+
+[sub_resource type="TorusMesh" id="TorusMesh_orbit"]
+inner_radius = 0.97
+outer_radius = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_sat"]
+size = Vector3(0.28, 0.28, 0.28)
+
+[sub_resource type="BoxMesh" id="BoxMesh_panelL"]
+size = Vector3(0.45, 0.04, 0.22)
+
+[sub_resource type="BoxMesh" id="BoxMesh_panelR"]
+size = Vector3(0.45, 0.04, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="Mat_earth"]
+albedo_texture = ExtResource("4_nasa_earth")
+albedo_color = Color(0.82, 0.9, 1.0, 1.0)
+metallic = 0.0
+roughness = 0.38
+specular_mode = 0
+
+[sub_resource type="Shader" id="Shader_earth_surface"]
+code = "shader_type spatial;\nrender_mode diffuse_burley, specular_schlick_ggx;\nfloat hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }\nfloat noise(vec2 p) { vec2 i=floor(p); vec2 f=fract(p); f=f*f*(3.0-2.0*f); return mix(mix(hash(i),hash(i+vec2(1.,0.)),f.x),mix(hash(i+vec2(0.,1.)),hash(i+vec2(1.,1.)),f.x),f.y); }\nvoid fragment(){ vec2 uv=UV; float n=noise(uv*5.0)+0.5*noise(uv*11.0)+0.25*noise(uv*22.0); float land=smoothstep(0.92,1.12,n); vec3 ocean=mix(vec3(0.006,0.025,0.11),vec3(0.015,0.20,0.55),pow(1.0-abs(uv.y-0.5)*1.7,1.5)); vec3 ground=mix(vec3(0.03,0.14,0.06),vec3(0.34,0.25,0.08),smoothstep(1.04,1.35,n)); ALBEDO=mix(ocean,ground,land); METALLIC=0.0; ROUGHNESS=0.48; EMISSION=ocean*0.22; }"
+
+[sub_resource type="ShaderMaterial" id="Mat_earth_procedural"]
+shader = SubResource("Shader_earth_surface")
+
+[sub_resource type="StandardMaterial3D" id="Mat_atmosphere"]
+albedo_color = Color(0.18, 0.46, 1.0, 0.07)
+transparency = 1
+cull_mode = 2
+emission_enabled = true
+emission = Color(0.1, 0.3, 0.8, 1.0)
+emission_energy_multiplier = 0.15
+
+[sub_resource type="StandardMaterial3D" id="Mat_orbit_path"]
+albedo_color = Color(0.3, 0.8, 1.0, 0.35)
+transparency = 1
+emission_enabled = true
+emission = Color(0.2, 0.6, 1.0, 1.0)
+emission_energy_multiplier = 0.4
+
+[sub_resource type="StandardMaterial3D" id="Mat_satellite"]
+albedo_color = Color(0.72, 0.76, 0.82, 1.0)
+metallic = 0.9
+roughness = 0.15
+emission_enabled = true
+emission = Color(0.5, 0.55, 0.6, 1.0)
+emission_energy_multiplier = 0.1
+
+[sub_resource type="StandardMaterial3D" id="Mat_solar_panel"]
+albedo_color = Color(0.08, 0.18, 0.65, 1.0)
+metallic = 0.3
+roughness = 0.4
+emission_enabled = true
+emission = Color(0.05, 0.1, 0.4, 1.0)
+emission_energy_multiplier = 0.2
+
+[sub_resource type="Environment" id="Env_orbit"]
+background_mode = 1
+background_color = Color(0.0, 0.0, 0.02, 1.0)
+ambient_light_source = 1
+ambient_light_color = Color(0.05, 0.08, 0.18, 1.0)
+ambient_light_energy = 0.5
+glow_enabled = true
+glow_intensity = 0.35
+glow_bloom = 0.06
+
+
+[node name="OrbitMission" type="Node3D"]
+script = ExtResource("1_orbit")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env_orbit")
+
+[node name="SunLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707, 0, 0.707, 0, 1, 0, -0.707, 0, 0.707, 60, 0, 60)
+light_energy = 2.2
+shadow_enabled = true
+light_color = Color(1.0, 0.97, 0.9, 1.0)
+
+[node name="Earth" type="Node3D" parent="."]
+
+[node name="EarthMesh" type="MeshInstance3D" parent="Earth"]
+mesh = SubResource("SphereMesh_earth")
+material_override = SubResource("Mat_earth")
+scale = Vector3(6, 6, 6)
+
+[node name="AtmosphereMesh" type="MeshInstance3D" parent="Earth"]
+mesh = SubResource("SphereMesh_atmo")
+material_override = SubResource("Mat_atmosphere")
+scale = Vector3(6.08, 6.08, 6.08)
+
+[node name="EarthModel" parent="Earth" instance=ExtResource("2_earth_model")]
+visible = false
+scale = Vector3(6, 6, 6)
+
+[node name="OrbitPath" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_orbit")
+material_override = SubResource("Mat_orbit_path")
+
+[node name="GroundTrack" type="Node3D" parent="."]
+
+[node name="Satellite" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
+
+[node name="SatMesh" type="MeshInstance3D" parent="Satellite"]
+visible = false
+mesh = SubResource("BoxMesh_sat")
+material_override = SubResource("Mat_satellite")
+
+[node name="SolarPanelL" type="MeshInstance3D" parent="Satellite"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38, 0, 0)
+mesh = SubResource("BoxMesh_panelL")
+material_override = SubResource("Mat_solar_panel")
+
+[node name="SolarPanelR" type="MeshInstance3D" parent="Satellite"]
+visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, 0, 0)
+mesh = SubResource("BoxMesh_panelR")
+material_override = SubResource("Mat_solar_panel")
+
+[node name="SatelliteModel" parent="Satellite" instance=ExtResource("3_satellite_model")]
+scale = Vector3(0.16, 0.16, 0.16)
+
+[node name="MissionCamera" type="Camera3D" parent="."]
+transform = Transform3D(0.95, 0, 0.3, 0, 1, 0, -0.3, 0, 0.95, -5, 4, 9)
+current = true
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="HUD" type="VBoxContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 8
+offset_top = 8
+offset_right = 340
+offset_bottom = 90
+
+[node name="ArrivalOverlay" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Vignette" type="ColorRect" parent="UI/ArrivalOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.55)
+
+[node name="ArrivalText" type="VBoxContainer" parent="UI/ArrivalOverlay"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 46
+offset_bottom = 150
+alignment = 1
+
+[node name="Kicker" type="Label" parent="UI/ArrivalOverlay/ArrivalText"]
+layout_mode = 2
+text = "MISSION ARCHITECT // ORBIT ARRIVAL"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="UI/ArrivalOverlay/ArrivalText"]
+layout_mode = 2
+text = "ORBITAL INSERTION"
+horizontal_alignment = 1
+
+[node name="Detail" type="Label" parent="UI/ArrivalOverlay/ArrivalText"]
+layout_mode = 2
+text = "Circularizing trajectory at target altitude"
+horizontal_alignment = 1
+
+[node name="DayLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "Day 0 / 365  |  Orbit #0"
+
+[node name="SpeedLabel" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "Speed: 10x"
+
+[node name="EclipseIndicator" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "SUNLIGHT"
+
+[node name="ContactIndicator" type="Label" parent="UI/HUD"]
+layout_mode = 2
+text = "NO CONTACT"
+
+[node name="TelemetryPanel" type="PanelContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchor_right = 0.0
+anchor_top = 0.1
+anchor_bottom = 0.72
+offset_right = 284
+
+[node name="VBox" type="VBoxContainer" parent="UI/TelemetryPanel"]
+layout_mode = 2
+
+[node name="TelTitle" type="Label" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+text = "TELEMETRY"
+horizontal_alignment = 1
+
+[node name="BatteryLabel" type="Label" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+text = "Battery: 100%"
+
+[node name="BatteryBar" type="ProgressBar" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+max_value = 100
+value = 100
+custom_minimum_size = Vector2(0, 12)
+
+[node name="PowerLabel" type="Label" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+text = "Power: 0W gen | 0W draw"
+autowrap_mode = 3
+
+[node name="PowerBar" type="ProgressBar" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+max_value = 100
+value = 50
+custom_minimum_size = Vector2(0, 12)
+
+[node name="ScienceLabel" type="Label" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+text = "Science: 0 / 80 pts"
+
+[node name="ScienceBar" type="ProgressBar" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+max_value = 80
+value = 0
+custom_minimum_size = Vector2(0, 12)
+
+[node name="DataLabel" type="Label" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+text = "Data: 0 MB stored"
+autowrap_mode = 3
+
+[node name="DataBar" type="ProgressBar" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+max_value = 100
+value = 0
+custom_minimum_size = Vector2(0, 12)
+
+[node name="OrbitInfoLabel" type="Label" parent="UI/TelemetryPanel/VBox"]
+layout_mode = 2
+text = "Orbit: LEO 550 km"
+autowrap_mode = 3
+
+[node name="EventLog" type="PanelContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchor_right = 0.0
+anchor_top = 0.72
+anchor_bottom = 1.0
+offset_right = 284
+offset_bottom = -58
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/EventLog"]
+layout_mode = 2
+
+[node name="EventList" type="VBoxContainer" parent="UI/EventLog/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Controls" type="HBoxContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchor_left = 0.24
+anchor_right = 0.76
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -56
+offset_bottom = -4
+
+[node name="Speed1x" type="Button" parent="UI/Controls"]
+layout_mode = 2
+custom_minimum_size = Vector2(44, 42)
+toggle_mode = true
+text = "1x"
+
+[node name="Speed10x" type="Button" parent="UI/Controls"]
+layout_mode = 2
+custom_minimum_size = Vector2(48, 42)
+toggle_mode = true
+button_pressed = true
+text = "10x"
+
+[node name="Speed100x" type="Button" parent="UI/Controls"]
+layout_mode = 2
+custom_minimum_size = Vector2(56, 42)
+toggle_mode = true
+text = "100x"
+
+[node name="Speed1000x" type="Button" parent="UI/Controls"]
+layout_mode = 2
+custom_minimum_size = Vector2(62, 42)
+toggle_mode = true
+text = "1000x"
+
+[node name="Sep1" type="VSeparator" parent="UI/Controls"]
+layout_mode = 2
+
+[node name="TransmitButton" type="Button" parent="UI/Controls"]
+layout_mode = 2
+custom_minimum_size = Vector2(96, 42)
+text = "Transmit"
+
+[node name="SafeModeButton" type="Button" parent="UI/Controls"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 42)
+text = "Safe Mode"
+
+[node name="Sep2" type="VSeparator" parent="UI/Controls"]
+layout_mode = 2
+
+[node name="EndMissionButton" type="Button" parent="UI/Controls"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 42)
+text = "End Mission"
+
+[node name="OrbitalMapPanel" type="PanelContainer" parent="UI"]
+layout_mode = 1
+anchor_left = 0.28
+anchor_right = 0.72
+anchor_top = 0.08
+anchor_bottom = 0.88
+visible = false
+
+[node name="MapVBox" type="VBoxContainer" parent="UI/OrbitalMapPanel"]
+layout_mode = 2
+
+[node name="MapTitle" type="Label" parent="UI/OrbitalMapPanel/MapVBox"]
+layout_mode = 2
+text = "ORBITAL MAP  [Press M to close]"
+horizontal_alignment = 1
+
+[node name="MapInfo" type="RichTextLabel" parent="UI/OrbitalMapPanel/MapVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[b]Current Orbit[/b]
+Altitude: 550 km
+Inclination: 97.6 deg
+Period: ~96 minutes
+
+[b]Ground Stations[/b]
+- Goldstone DSN (California)
+- Madrid DSN (Spain)
+- Canberra DSN (Australia)
+- Svalbard (Norway)"
+
+[node name="EventPopup" type="PanelContainer" parent="UI"]
+layout_mode = 1
+anchor_left = 0.28
+anchor_right = 0.72
+anchor_top = 0.04
+anchor_bottom = 0.2
+visible = false
+
+[node name="EventLabel" type="Label" parent="UI/EventPopup"]
+layout_mode = 2
+autowrap_mode = 3
+text = ""
+
+[node name="PauseMenu" type="PanelContainer" parent="UI"]
+layout_mode = 1
+anchor_left = 0.35
+anchor_right = 0.65
+anchor_top = 0.28
+anchor_bottom = 0.72
+visible = false
+
+[node name="PauseVBox" type="VBoxContainer" parent="UI/PauseMenu"]
+layout_mode = 2
+alignment = 1
+
+[node name="PauseTitle" type="Label" parent="UI/PauseMenu/PauseVBox"]
+layout_mode = 2
+text = "MISSION PAUSED"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="UI/PauseMenu/PauseVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 46)
+text = "Resume Mission"
+
+[node name="QuitToMenuButton" type="Button" parent="UI/PauseMenu/PauseVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 46)
+text = "Quit to Main Menu"

@@ -1,0 +1,7 @@
+WARNING: Your video card drivers are known to have low quality OpenGL 3.3 support, switching to ANGLE.
+   at: DisplayServerWindows (platform/windows/display_server_windows.cpp:8229)
+WARNING: Screen-space reflections (SSR) are only available when using the Forward+ renderer.
+   at: environment_set_ssr (servers/rendering/storage/environment_storage.cpp:653)
+   GDScript backtrace (most recent call first):
+       [0] _build_3d_hangar (res://scripts/ui/MissionSelect.gd:366)
+       [1] _ready (res://scripts/ui/MissionSelect.gd:49)

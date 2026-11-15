@@ -1,0 +1,122 @@
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Unable to create shader cache directory SortShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ParticlesShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ParticlesCopyShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory CanvasShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory CanvasOcclusionShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory TexBlitShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ClusterRenderShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ClusterStoreShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ClusterDebugShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SceneForwardClusteredShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory BestFitNormalShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory IntegrateDfgShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory TaaResolveShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory Fsr2DepthClipPassShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory Fsr2ReconstructPreviousDepthPassShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory Fsr2LockPassShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory Fsr2AccumulatePassShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory Fsr2RcasPassShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory Fsr2ComputeLuminancePyramidPassShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory Fsr2AutogenReactivePassShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory Fsr2TcrAutogenPassShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsEffectsDownsampleShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsilShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsilImportanceMapShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsilBlurShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsilInterleaveShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsaoShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsaoImportanceMapShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsaoBlurShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SsaoInterleaveShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ScreenSpaceReflectionDownsampleShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ScreenSpaceReflectionHizShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ScreenSpaceReflectionShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ScreenSpaceReflectionFilterShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory ScreenSpaceReflectionResolveShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SubsurfaceScatteringShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SkyShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory VoxelGiShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory VoxelGiDebugShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SdfgiPreprocessShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SdfgiDirectLightShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SdfgiIntegrateShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory GiShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SdfgiDebugShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory SdfgiDebugProbesShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory VolumetricFogShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory VolumetricFogProcessShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Unable to create shader cache directory BokehDofShaderRD at user://shader_cache.
+   at: _initialize_cache (servers/rendering/renderer_rd/shader_rd.cpp:1053)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)
+ERROR: Condition "header != String(shader_file_header)" is true. Returning: false
+   at: _load_from_cache (servers/rendering/renderer_rd/shader_rd.cpp:633)

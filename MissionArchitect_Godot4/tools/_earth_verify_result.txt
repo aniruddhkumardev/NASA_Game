@@ -1,0 +1,9 @@
+PASS: ClimateSurveyTargets node exists in orbit scene
+PASS: 6 survey pins built (got 6)
+SHOT: _diag_earth_captured.png err=0 1280x720
+PASS: captured>=3 (got 5)
+PASS: J2 drift ≈ sun-sync (got 0.9879)
+FAIL: auto-switch stalled (scene=OrbitMission); manual switch
+SHOT: _diag_earth_report.png err=0 1280x720
+SHOT: _diag_earth_builder.png err=0 1280x720
+PASS: sensor_analogs map has 6 entries

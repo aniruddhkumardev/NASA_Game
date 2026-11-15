@@ -1,0 +1,25 @@
+PASS: click activated area inspection
+PASS: area panel visible
+PASS: area_panel reference visible
+PASS: ray hit round-trips to site (36.00, -70.00 vs 36.0, -70.0)
+PASS: temperature in a plausible range (12.4 C)
+PASS: weather condition populated
+PASS: click resolved a real place name (📍 Near Atlantic City · New Jersey, United States  ·  540 km away)
+PASS: reverse lookup at 60.5N 51.0E finds Syktyvkar (Syktyvkar)
+PASS: nearest real SWOT site identified
+PASS: panel names the source mission for the site data
+PASS: panel labels temperature/weather as an in-game estimate
+PASS: surface marker pinned
+PASS: surface ring marker built
+PASS: area inspection layer built
+SHOT: _diag_area_inspection.png err=0 1280x720
+PASS: area panel still visible after zoom
+PASS: zoom-in reduced camera altitude (0.77)
+SHOT: _diag_area_inspection_zoom.png err=0 1280x720
+PASS: search returns results for Syktyvkar
+PASS: search selection activated inspection
+PASS: search flew to Syktyvkar (61.66, 50.82)
+PASS: panel shows the searched place name
+SHOT: _diag_place_search.png err=0 1280x720
+PASS: right-click/back closes the area panel
+PASS: inspection mode exited

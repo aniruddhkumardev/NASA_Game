@@ -1,0 +1,416 @@
+mission=Earth Climate Sentinel target=550 incl=97.6
+>>> COUNTDOWN        met=    0.0 alt=    0.00 km v=     0.0 m/s Ap=      0.0 Pe=  -6371.0 thr=  0.0% fuel=100.0% att=  90.0 q=  0.00 g=0.00
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=vistrue  LaunchComplex=vistrue  bg=2  fog=true
+      ATMO phase=STANDING BY  |  TROPOSPHERE · 100% air
+      DECKS n=4 visible=4 beats=0 path=0.0 km karman=true
+>>> LIFTOFF          met=    0.3 alt=    0.00 km v=     1.3 m/s Ap=      0.0 Pe=  -6371.0 thr=100.0% fuel= 99.8% att=  90.0 q=  0.00 g=1.45
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=vistrue  LaunchComplex=vistrue  bg=2  fog=true
+      ATMO phase=LIFTOFF  |  TROPOSPHERE · 100% air
+      DECKS n=4 visible=4 beats=0 path=0.0 km karman=true
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=vistrue  LaunchComplex=vistrue  bg=2  fog=true
+      ATMO phase=LIFTOFF  |  TROPOSPHERE · 100% air
+      DECKS n=4 visible=4 beats=0 path=0.0 km karman=true
+    LIFTOFF          t=     0 alt=    0.00 vv=    1.3 hv=    0.0 att= 90.0 fpa=  0.0 Ap=       0 Pe=   -6371 thr=100% mass= 533652kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=vistrue  LaunchComplex=vistrue  bg=2  fog=true
+      ATMO phase=LIFTOFF  |  TROPOSPHERE · 93% air
+      DECKS n=4 visible=4 beats=0 path=0.6 km karman=true
+    LIFTOFF          t=    16 alt=    0.59 vv=   77.7 hv=    0.0 att= 90.0 fpa=  0.0 Ap=       1 Pe=   -6371 thr=100% mass= 495277kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=vistrue  bg=2  fog=true
+      ATMO phase=LIFTOFF  |  TROPOSPHERE · 75% air
+      DECKS n=4 visible=4 beats=1 path=2.5 km karman=true
+    LIFTOFF          t=    31 alt=    2.49 vv=  171.6 hv=    0.2 att= 89.6 fpa=  0.4 Ap=       4 Pe=   -6371 thr=100% mass= 456902kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=vistrue  bg=2  fog=true
+      ATMO phase=LIFTOFF  |  TROPOSPHERE · 49.4% air
+      DECKS n=4 visible=4 beats=2 path=6.0 km karman=true
+    LIFTOFF          t=    47 alt=    5.99 vv=  285.3 hv=    8.0 att= 86.8 fpa=  3.2 Ap=      10 Pe=   -6371 thr=100% mass= 418526kg
+>>> MAX_Q            met=   52.6 alt=    7.76 km v=   305.3 m/s Ap=     12.5 Pe=  -6371.0 thr= 72.0% fuel= 67.9% att=  85.4 q= 22.94 g=1.37
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=vistrue  bg=2  fog=false
+      ATMO phase=LIFTOFF  |  TROPOSPHERE · 40.1% air
+      DECKS n=4 visible=4 beats=2 path=7.8 km karman=true
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=GRAVITY TURN  |  TROPOSPHERE · 28.0% air
+      DECKS n=4 visible=4 beats=2 path=10.8 km karman=true
+    MAX_Q            t=    62 alt=   10.82 vv=  339.5 hv=   26.4 att= 83.0 fpa=  7.0 Ap=      17 Pe=   -6371 thr= 72% mass= 390647kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=GRAVITY TURN  |  STRATOSPHERE · 14.3% air
+      DECKS n=4 visible=4 beats=3 path=16.6 km karman=true
+    MAX_Q            t=    77 alt=   16.55 vv=  406.5 hv=   64.2 att= 77.0 fpa= 13.0 Ap=      25 Pe=   -6371 thr= 72% mass= 363016kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=GRAVITY TURN  |  STRATOSPHERE · 6.26% air
+      DECKS n=4 visible=4 beats=3 path=23.8 km karman=true
+    MAX_Q            t=    93 alt=   23.55 vv=  526.2 hv=  147.3 att= 69.2 fpa= 20.8 Ap=      38 Pe=   -6370 thr=100% mass= 330641kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=GRAVITY TURN  |  STRATOSPHERE · 2.04% air
+      DECKS n=4 visible=4 beats=3 path=33.9 km karman=true
+    MAX_Q            t=   108 alt=   33.08 vv=  712.7 hv=  309.9 att= 59.0 fpa= 31.0 Ap=      59 Pe=   -6366 thr=100% mass= 292266kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=GRAVITY TURN  |  STRATOSPHERE · 0.47% air
+      DECKS n=4 visible=4 beats=3 path=48.0 km karman=true
+    MAX_Q            t=   124 alt=   45.55 vv=  904.1 hv=  566.5 att= 46.5 fpa= 43.5 Ap=      88 Pe=   -6354 thr=100% mass= 253891kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=UPPER ATMOSPHERE  |  MESOSPHERE · 0.08% air
+      DECKS n=4 visible=4 beats=4 path=67.2 km karman=true
+    MAX_Q            t=   139 alt=   60.81 vv= 1069.1 hv=  950.3 att= 31.5 fpa= 58.5 Ap=     122 Pe=   -6324 thr=100% mass= 215515kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=UPPER ATMOSPHERE  |  MESOSPHERE · 0.01% air
+      DECKS n=4 visible=4 beats=4 path=92.6 km karman=true
+    MAX_Q            t=   154 alt=   78.23 vv= 1181.7 hv= 1479.5 att= 19.9 fpa= 70.1 Ap=     155 Pe=   -6255 thr= 96% mass= 177281kg
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=UPPER ATMOSPHERE  |  THERMOSPHERE · 0.00% air
+      DECKS n=4 visible=4 beats=5 path=125.7 km karman=true
+    MAX_Q            t=   170 alt=   96.68 vv= 1198.1 hv= 2083.3 att= 10.4 fpa= 79.6 Ap=     179 Pe=   -6135 thr= 78% mass= 143972kg
+>>> STAGE_SEP        met=  172.3 alt=   99.55 km v=  2484.5 m/s Ap=    181.7 Pe=  -6111.8 thr=  0.0% fuel=  0.0% att=   9.6 q=  0.03 g=4.20
+      ENV sky_mat=yes  horizon=true  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=2  fog=false
+      ATMO phase=UPPER ATMOSPHERE  |  THERMOSPHERE · 0.00% air
+      DECKS n=4 visible=4 beats=5 path=131.6 km karman=true
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SPACE ASCENT  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=163.5 km karman=true
+    STAGE_SEP        t=   185 alt=  114.33 vv= 1080.3 hv= 2168.8 att=  5.9 fpa= 84.1 Ap=     182 Pe=   -6113 thr=  0% mass= 137700kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SPACE ASCENT  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=200.5 km karman=true
+    STAGE_SEP        t=   201 alt=  130.02 vv=  945.1 hv= 2158.4 att=  2.0 fpa= 88.0 Ap=     182 Pe=   -6114 thr=  0% mass= 137700kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SPACE ASCENT  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=236.3 km karman=true
+    STAGE_SEP        t=   216 alt=  143.54 vv=  811.4 hv= 2149.4 att=  2.0 fpa= 88.0 Ap=     182 Pe=   -6115 thr=  0% mass= 137700kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SPACE ASCENT  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=271.3 km karman=true
+    STAGE_SEP        t=   232 alt=  155.00 vv=  678.1 hv= 2141.9 att=  2.0 fpa= 88.0 Ap=     182 Pe=   -6116 thr=  0% mass= 137700kg
+>>> FAIRING_SEP      met=  235.0 alt=  157.32 km v=  2241.2 m/s Ap=    181.7 Pe=  -6115.3 thr=100.0% fuel= 99.8% att=   2.6 q=  0.00 g=1.30
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SPACE ASCENT  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=279.2 km karman=true
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SPACE ASCENT  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=306.6 km karman=true
+    FAIRING_SEP      t=   247 alt=  164.56 vv=  579.0 hv= 2292.0 att= 21.7 fpa= 68.3 Ap=     184 Pe=   -6077 thr=100% mass= 111994kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SPACE ASCENT  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=344.3 km karman=true
+    FAIRING_SEP      t=   262 alt=  173.21 vv=  546.9 hv= 2474.5 att= 27.4 fpa= 62.6 Ap=     191 Pe=   -6025 thr=100% mass= 105225kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=384.7 km karman=true
+    FAIRING_SEP      t=   278 alt=  181.42 vv=  519.8 hv= 2671.5 att= 25.1 fpa= 64.9 Ap=     198 Pe=   -5963 thr=100% mass=  98456kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=428.2 km karman=true
+    FAIRING_SEP      t=   293 alt=  189.22 vv=  494.4 hv= 2886.8 att= 23.0 fpa= 67.0 Ap=     205 Pe=   -5888 thr=100% mass=  91687kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=475.1 km karman=true
+    FAIRING_SEP      t=   308 alt=  196.65 vv=  471.3 hv= 3122.6 att= 21.1 fpa= 68.9 Ap=     211 Pe=   -5797 thr=100% mass=  84919kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=525.3 km karman=true
+    FAIRING_SEP      t=   324 alt=  203.71 vv=  451.6 hv= 3379.9 att= 19.2 fpa= 70.8 Ap=     217 Pe=   -5687 thr=100% mass=  78194kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=579.9 km karman=true
+    FAIRING_SEP      t=   339 alt=  210.54 vv=  436.1 hv= 3665.8 att= 17.5 fpa= 72.5 Ap=     224 Pe=   -5550 thr=100% mass=  71425kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=639.2 km karman=true
+    FAIRING_SEP      t=   355 alt=  217.17 vv=  426.2 hv= 3983.5 att= 15.9 fpa= 74.1 Ap=     231 Pe=   -5377 thr=100% mass=  64656kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=703.6 km karman=true
+    FAIRING_SEP      t=   370 alt=  223.70 vv=  423.7 hv= 4339.6 att= 14.4 fpa= 75.6 Ap=     238 Pe=   -5155 thr=100% mass=  57887kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=773.8 km karman=true
+    FAIRING_SEP      t=   385 alt=  230.27 vv=  430.7 hv= 4742.8 att= 12.9 fpa= 77.1 Ap=     246 Pe=   -4861 thr=100% mass=  51118kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=850.6 km karman=true
+    FAIRING_SEP      t=   401 alt=  237.03 vv=  450.3 hv= 5206.2 att= 11.6 fpa= 78.4 Ap=     257 Pe=   -4458 thr=100% mass=  44350kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=935.2 km karman=true
+    FAIRING_SEP      t=   416 alt=  244.22 vv=  486.4 hv= 5749.0 att= 10.3 fpa= 79.7 Ap=     273 Pe=   -3875 thr=100% mass=  37581kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1028.8 km karman=true
+    FAIRING_SEP      t=   432 alt=  252.10 vv=  537.6 hv= 6358.2 att=  9.1 fpa= 80.9 Ap=     301 Pe=   -3034 thr= 86% mass=  31219kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=COAST TO APOGEE  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1131.8 km karman=true
+    FAIRING_SEP      t=   447 alt=  260.82 vv=  595.3 hv= 6967.9 att=  8.0 fpa= 82.0 Ap=     361 Pe=   -1922 thr= 71% mass=  25921kg
+>>> ORBITAL_INSERT   met=  460.4 alt=  269.18 km v=  7508.7 m/s Ap=    550.8 Pe=   -773.4 thr=  0.0% fuel= 13.4% att=   6.6 q=  0.00 g=0.00
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1229.1 km karman=true
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1244.1 km karman=true
+    ORBITAL_INSERT   t=   462 alt=  270.48 vv=  649.9 hv= 7477.4 att=  5.0 fpa= 85.0 Ap=     550 Pe=    -777 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1359.5 km karman=true
+    ORBITAL_INSERT   t=   478 alt=  280.41 vv=  640.3 hv= 7455.1 att=  4.9 fpa= 85.1 Ap=     543 Pe=    -802 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1474.5 km karman=true
+    ORBITAL_INSERT   t=   493 alt=  290.20 vv=  630.2 hv= 7433.2 att=  4.8 fpa= 85.2 Ap=     536 Pe=    -828 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1588.5 km karman=true
+    ORBITAL_INSERT   t=   509 alt=  299.76 vv=  619.6 hv= 7411.9 att=  4.8 fpa= 85.2 Ap=     531 Pe=    -853 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1702.9 km karman=true
+    ORBITAL_INSERT   t=   524 alt=  309.21 vv=  608.4 hv= 7391.0 att=  4.7 fpa= 85.3 Ap=     526 Pe=    -877 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1816.9 km karman=true
+    ORBITAL_INSERT   t=   539 alt=  318.49 vv=  596.7 hv= 7370.5 att=  4.6 fpa= 85.4 Ap=     521 Pe=    -902 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=1930.6 km karman=true
+    ORBITAL_INSERT   t=   555 alt=  327.59 vv=  584.5 hv= 7350.5 att=  4.5 fpa= 85.5 Ap=     517 Pe=    -926 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2044.8 km karman=true
+    ORBITAL_INSERT   t=   570 alt=  336.55 vv=  571.8 hv= 7330.8 att=  4.5 fpa= 85.5 Ap=     513 Pe=    -949 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2156.4 km karman=true
+    ORBITAL_INSERT   t=   585 alt=  345.14 vv=  558.9 hv= 7312.1 att=  4.4 fpa= 85.6 Ap=     510 Pe=    -972 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2269.2 km karman=true
+    ORBITAL_INSERT   t=   601 alt=  353.64 vv=  545.4 hv= 7293.6 att=  4.3 fpa= 85.7 Ap=     507 Pe=    -995 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2382.4 km karman=true
+    ORBITAL_INSERT   t=   616 alt=  361.99 vv=  531.4 hv= 7275.5 att=  4.2 fpa= 85.8 Ap=     504 Pe=   -1017 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2494.6 km karman=true
+    ORBITAL_INSERT   t=   632 alt=  370.06 vv=  517.0 hv= 7258.1 att=  4.1 fpa= 85.9 Ap=     502 Pe=   -1038 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2606.5 km karman=true
+    ORBITAL_INSERT   t=   647 alt=  377.91 vv=  502.3 hv= 7241.2 att=  4.0 fpa= 86.0 Ap=     500 Pe=   -1059 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2719.6 km karman=true
+    ORBITAL_INSERT   t=   663 alt=  385.63 vv=  487.0 hv= 7224.7 att=  3.9 fpa= 86.1 Ap=     498 Pe=   -1079 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2830.3 km karman=true
+    ORBITAL_INSERT   t=   678 alt=  392.96 vv=  471.6 hv= 7209.0 att=  3.7 fpa= 86.3 Ap=     497 Pe=   -1099 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=2942.1 km karman=true
+    ORBITAL_INSERT   t=   694 alt=  400.14 vv=  455.6 hv= 7193.8 att=  3.6 fpa= 86.4 Ap=     495 Pe=   -1118 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3053.0 km karman=true
+    ORBITAL_INSERT   t=   709 alt=  407.04 vv=  439.5 hv= 7179.1 att=  3.5 fpa= 86.5 Ap=     494 Pe=   -1136 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3164.4 km karman=true
+    ORBITAL_INSERT   t=   724 alt=  413.72 vv=  422.9 hv= 7165.0 att=  3.4 fpa= 86.6 Ap=     493 Pe=   -1154 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3274.8 km karman=true
+    ORBITAL_INSERT   t=   740 alt=  420.10 vv=  406.1 hv= 7151.5 att=  3.3 fpa= 86.7 Ap=     492 Pe=   -1170 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3385.7 km karman=true
+    ORBITAL_INSERT   t=   755 alt=  426.26 vv=  388.9 hv= 7138.6 att=  3.1 fpa= 86.9 Ap=     492 Pe=   -1186 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3495.0 km karman=true
+    ORBITAL_INSERT   t=   771 alt=  432.08 vv=  371.7 hv= 7126.4 att=  3.0 fpa= 87.0 Ap=     491 Pe=   -1202 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3605.5 km karman=true
+    ORBITAL_INSERT   t=   786 alt=  437.70 vv=  353.9 hv= 7114.6 att=  2.8 fpa= 87.2 Ap=     491 Pe=   -1216 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3716.5 km karman=true
+    ORBITAL_INSERT   t=   802 alt=  443.08 vv=  335.8 hv= 7103.3 att=  2.7 fpa= 87.3 Ap=     490 Pe=   -1230 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3826.7 km karman=true
+    ORBITAL_INSERT   t=   817 alt=  448.15 vv=  317.6 hv= 7092.8 att=  2.6 fpa= 87.4 Ap=     490 Pe=   -1243 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=3935.9 km karman=true
+    ORBITAL_INSERT   t=   833 alt=  452.90 vv=  299.3 hv= 7082.9 att=  2.4 fpa= 87.6 Ap=     490 Pe=   -1256 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4045.0 km karman=true
+    ORBITAL_INSERT   t=   848 alt=  457.36 vv=  280.8 hv= 7073.7 att=  2.3 fpa= 87.7 Ap=     489 Pe=   -1267 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4153.9 km karman=true
+    ORBITAL_INSERT   t=   863 alt=  461.54 vv=  262.1 hv= 7065.0 att=  2.1 fpa= 87.9 Ap=     489 Pe=   -1278 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4263.5 km karman=true
+    ORBITAL_INSERT   t=   879 alt=  465.46 vv=  243.1 hv= 7056.9 att=  2.0 fpa= 88.0 Ap=     489 Pe=   -1288 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4372.1 km karman=true
+    ORBITAL_INSERT   t=   894 alt=  469.05 vv=  224.0 hv= 7049.5 att=  1.8 fpa= 88.2 Ap=     489 Pe=   -1297 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4480.7 km karman=true
+    ORBITAL_INSERT   t=   910 alt=  472.35 vv=  204.8 hv= 7042.7 att=  1.7 fpa= 88.3 Ap=     489 Pe=   -1306 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4589.1 km karman=true
+    ORBITAL_INSERT   t=   925 alt=  475.36 vv=  185.5 hv= 7036.5 att=  1.5 fpa= 88.5 Ap=     489 Pe=   -1314 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4697.5 km karman=true
+    ORBITAL_INSERT   t=   941 alt=  478.06 vv=  166.0 hv= 7030.9 att=  1.4 fpa= 88.6 Ap=     489 Pe=   -1321 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4805.8 km karman=true
+    ORBITAL_INSERT   t=   956 alt=  480.47 vv=  146.4 hv= 7026.0 att=  1.2 fpa= 88.8 Ap=     489 Pe=   -1327 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=4914.0 km karman=true
+    ORBITAL_INSERT   t=   971 alt=  482.57 vv=  126.7 hv= 7021.7 att=  1.0 fpa= 89.0 Ap=     489 Pe=   -1332 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5022.1 km karman=true
+    ORBITAL_INSERT   t=   987 alt=  484.37 vv=  107.0 hv= 7018.0 att=  0.9 fpa= 89.1 Ap=     489 Pe=   -1337 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5130.1 km karman=true
+    ORBITAL_INSERT   t=  1002 alt=  485.86 vv=   87.2 hv= 7014.9 att=  0.7 fpa= 89.3 Ap=     489 Pe=   -1340 thr=  0% mass=  22155kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5239.9 km karman=true
+    ORBITAL_INSERT   t=  1018 alt=  487.07 vv=   67.7 hv= 7177.2 att=  0.0 fpa= 90.0 Ap=     489 Pe=    -915 thr= 58% mass=  21110kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5354.7 km karman=true
+    ORBITAL_INSERT   t=  1033 alt=  550.00 vv=    0.1 hv= 7589.0 att=  2.0 fpa= 88.0 Ap=     550 Pe=     550 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5471.6 km karman=true
+    ORBITAL_INSERT   t=  1049 alt=  550.00 vv=    0.2 hv= 7589.0 att=  2.0 fpa= 88.0 Ap=     550 Pe=     550 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5588.5 km karman=true
+    ORBITAL_INSERT   t=  1064 alt=  550.01 vv=    0.4 hv= 7589.0 att=  2.0 fpa= 88.0 Ap=     550 Pe=     550 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5705.3 km karman=true
+    ORBITAL_INSERT   t=  1079 alt=  550.02 vv=    0.6 hv= 7589.0 att=  2.0 fpa= 88.0 Ap=     551 Pe=     549 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=ORBIT INSERTION  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5823.0 km karman=true
+    ORBITAL_INSERT   t=  1095 alt=  550.03 vv=    0.8 hv= 7588.9 att=  2.0 fpa= 88.0 Ap=     551 Pe=     549 thr=  0% mass=  18822kg
+>>> SATELLITE_DEPLOY met= 1099.5 alt=  550.03 km v=  7588.9 m/s Ap=    550.7 Pe=    549.2 thr=  0.0% fuel= 10.4% att=   2.0 q=  0.00 g=0.00
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5858.6 km karman=true
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=5939.8 km karman=true
+    SATELLITE_DEPLOY t=  1110 alt=  550.04 vv=    1.0 hv= 7588.9 att=  2.0 fpa= 88.0 Ap=     551 Pe=     549 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6057.5 km karman=true
+    SATELLITE_DEPLOY t=  1126 alt=  550.06 vv=    1.1 hv= 7588.9 att=  2.0 fpa= 88.0 Ap=     551 Pe=     549 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6174.3 km karman=true
+    SATELLITE_DEPLOY t=  1141 alt=  550.07 vv=    1.3 hv= 7588.8 att=  2.0 fpa= 88.0 Ap=     551 Pe=     549 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6291.2 km karman=true
+    SATELLITE_DEPLOY t=  1157 alt=  550.10 vv=    1.5 hv= 7588.8 att=  2.0 fpa= 88.0 Ap=     551 Pe=     548 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6408.1 km karman=true
+    SATELLITE_DEPLOY t=  1172 alt=  550.12 vv=    1.6 hv= 7588.7 att=  2.0 fpa= 88.0 Ap=     551 Pe=     548 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6524.9 km karman=true
+    SATELLITE_DEPLOY t=  1187 alt=  550.15 vv=    1.8 hv= 7588.7 att=  2.0 fpa= 88.0 Ap=     551 Pe=     548 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6641.8 km karman=true
+    SATELLITE_DEPLOY t=  1203 alt=  550.18 vv=    2.0 hv= 7588.6 att=  2.0 fpa= 88.0 Ap=     552 Pe=     548 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6759.4 km karman=true
+    SATELLITE_DEPLOY t=  1218 alt=  550.21 vv=    2.2 hv= 7588.5 att=  2.0 fpa= 88.0 Ap=     552 Pe=     548 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6877.0 km karman=true
+    SATELLITE_DEPLOY t=  1234 alt=  550.24 vv=    2.3 hv= 7588.5 att=  2.0 fpa= 88.0 Ap=     552 Pe=     547 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=6993.9 km karman=true
+    SATELLITE_DEPLOY t=  1249 alt=  550.28 vv=    2.5 hv= 7588.4 att=  2.0 fpa= 88.0 Ap=     552 Pe=     547 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=7110.0 km karman=true
+    SATELLITE_DEPLOY t=  1264 alt=  550.32 vv=    2.6 hv= 7588.3 att=  2.0 fpa= 88.0 Ap=     552 Pe=     547 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=7226.9 km karman=true
+    SATELLITE_DEPLOY t=  1280 alt=  550.36 vv=    2.8 hv= 7588.2 att=  2.0 fpa= 88.0 Ap=     552 Pe=     547 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=7343.7 km karman=true
+    SATELLITE_DEPLOY t=  1295 alt=  550.41 vv=    3.0 hv= 7588.1 att=  2.0 fpa= 88.0 Ap=     552 Pe=     546 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=7460.6 km karman=true
+    SATELLITE_DEPLOY t=  1311 alt=  550.45 vv=    3.1 hv= 7588.0 att=  2.0 fpa= 88.0 Ap=     552 Pe=     546 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=7577.4 km karman=true
+    SATELLITE_DEPLOY t=  1326 alt=  550.50 vv=    3.3 hv= 7587.9 att=  2.0 fpa= 88.0 Ap=     552 Pe=     546 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=7694.3 km karman=true
+    SATELLITE_DEPLOY t=  1341 alt=  550.55 vv=    3.4 hv= 7587.8 att=  2.0 fpa= 88.0 Ap=     552 Pe=     545 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=7811.1 km karman=true
+    SATELLITE_DEPLOY t=  1357 alt=  550.61 vv=    3.6 hv= 7587.7 att=  2.0 fpa= 88.0 Ap=     553 Pe=     545 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=7928.0 km karman=true
+    SATELLITE_DEPLOY t=  1372 alt=  550.66 vv=    3.7 hv= 7587.5 att=  2.0 fpa= 88.0 Ap=     553 Pe=     545 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=8044.8 km karman=true
+    SATELLITE_DEPLOY t=  1388 alt=  550.72 vv=    3.8 hv= 7587.4 att=  2.0 fpa= 88.0 Ap=     553 Pe=     544 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=8161.7 km karman=true
+    SATELLITE_DEPLOY t=  1403 alt=  550.78 vv=    4.0 hv= 7587.3 att=  2.0 fpa= 88.0 Ap=     553 Pe=     544 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=8278.5 km karman=true
+    SATELLITE_DEPLOY t=  1418 alt=  550.84 vv=    4.1 hv= 7587.2 att=  2.0 fpa= 88.0 Ap=     553 Pe=     544 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=8395.4 km karman=true
+    SATELLITE_DEPLOY t=  1434 alt=  550.91 vv=    4.2 hv= 7587.0 att=  2.0 fpa= 88.0 Ap=     553 Pe=     543 thr=  0% mass=  18822kg
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=SATELLITE DEPLOY  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=8511.4 km karman=true
+    SATELLITE_DEPLOY t=  1449 alt=  550.97 vv=    4.4 hv= 7586.9 att=  2.0 fpa= 88.0 Ap=     553 Pe=     543 thr=  0% mass=  18822kg
+>>> COMPLETE         met= 1459.6 alt=  551.02 km v=  7586.8 m/s Ap=    553.0 Pe=    542.9 thr=  0.0% fuel= 10.4% att=   2.0 q=  0.00 g=0.00
+      ENV sky_mat=yes  horizon=false  Ground=visfalse  GroundDetail=visfalse  LaunchComplex=visfalse  bg=1  fog=false
+      ATMO phase=OPERATIONAL  |  SPACE · KÁRMÁN LINE
+      DECKS n=4 visible=0 beats=5 path=8591.1 km karman=true
+FINAL state=COMPLETE met=1462.9 alt=551.0 v=7586.7 Ap=553.1 Pe=542.8 sim_state={"distance_flown_km":5309.94927791849,"downrange_km":5226.70358212136,"insertion_met_s":1027.39365018181,"karman_met_s":172.620671999999,"orbit_altitude_km":550.0,"orbit_period_min":95.5021181555768,"orbit_speed_ms":7588.99843459486}
+BOOSTER recoverable=false landed=false crashed=false touchdown_speed=0.00 alt=0.0 prop_start=0.0 t prop_left(margin)=0.0 t peak_entry_g=0.00 window=0
+ORBIT period_true=95.50 min period_animated=95.54 min err=0.044% downrange_touchdown=0.0 km

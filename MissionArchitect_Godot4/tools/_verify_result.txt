@@ -1,0 +1,4 @@
+[PASS] missionselect script attached
+[PASS] missionselect cards built (>0)
+[PASS] missionselect GameManager missions present
+[PASS] missionselect begin button wired

@@ -1,0 +1,106 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/simulation/MarsTransfer.gd" id="1_transfer"]
+
+[sub_resource type="Environment" id="Environment_space"]
+background_mode = 1
+background_color = Color(0.001, 0.003, 0.012, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.18, 0.12, 0.08, 1)
+ambient_light_energy = 0.28
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.35
+
+[sub_resource type="StyleBoxFlat" id="Panel_style"]
+bg_color = Color(0.0823529, 0.0823529, 0.0823529, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.2, 0.2, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 22.0
+content_margin_top = 18.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+
+[node name="MarsTransfer" type="Node3D"]
+script = ExtResource("1_transfer")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_space")
+
+[node name="Camera" type="Camera3D" parent="."]
+position = Vector3(0, 2, 8)
+current = true
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MissionTag" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 24.0
+offset_right = 820.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.701961, 0.701961, 0.701961, 1)
+theme_override_font_sizes/font_size = 18
+text = "MARS CLIMATE EXPLORER  •  EARTH LAUNCH → CRUISE → MARS LANDING"
+
+[node name="Panel" type="PanelContainer" parent="UI"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 70.0
+offset_right = 580.0
+offset_bottom = 430.0
+theme_override_styles/panel = SubResource("Panel_style")
+
+[node name="VBox" type="VBoxContainer" parent="UI/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "MARS CLIMATE EXPLORER"
+
+[node name="Subtitle" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.701961, 0.701961, 0.701961, 1)
+theme_override_font_sizes/font_size = 15
+text = "Interplanetary Cruise // Earth → Mars"
+autowrap_mode = 3
+
+[node name="Phase" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="Detail" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.701961, 0.701961, 0.701961, 1)
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 3
+
+[node name="Telemetry" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.466667, 0.466667, 0.466667, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 3
+
+[node name="Begin" type="Button" parent="UI/Panel/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 52)
+theme_override_font_sizes/font_size = 16
+text = "INITIATE TRANS-MARS CRUISE"
